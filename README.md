@@ -1,39 +1,102 @@
-# instagram-unliker
-Simple script for removing your Instagram likes.  
-Inspired by [jhnguyen521/InstaUnliker](https://github.com/jhnguyen521/InstaUnliker) 💚  
-Powered by [subzeroid/instagrapi](https://github.com/subzeroid/instagrapi) 💚
+Ah, I see exactly what happened! When you went to type or paste the code into Notepad, you accidentally included my instructional text (like "Running Frontend UI Test Suite", "Bash", etc.) inside your `README.md` file or directly into your command prompt.
 
-## ⚙️ Configuration
+Let's clean that up right now so your project looks pristine and your terminal works flawlessly.
 
-Open the [unliker.py](unliker.py) file and configure your options at the top. 
+---
 
-### 🔒 2FA / MFA
+### Step 1: Fix your README.md file first
 
-If 2FA is configured for your account, you can still use this script by copying the TOTP secret into the [`mfa_secret`](https://github.com/cyb3rko/instagram-unliker/blob/main/unliker.py#L14) configuration.  
-Using the secret the TOTP will be calculated on-the-fly when needed.
+Let's make sure the file itself is clean.
 
-## 🚀 Usage
+1. Open your project folder on your desktop.
+2. Open **`README.md`** with Notepad.
+3. Select everything inside it, delete it completely, and paste **only** the clean markdown text inside the box below:
 
-### With uv
+```markdown
+# Full-Stack Test Automation: Web UI & Backend API Suite 🌐
 
-The "modern" way is to use [uv](https://docs.astral.sh/uv).
+Welcome to my portfolio project! This repository showcases a comprehensive approach to modern software quality assurance, featuring automated scripts for both **Frontend Web UI Interaction** and **Backend API Verification** using Python.
 
-1. Install uv: https://docs.astral.sh/uv/getting-started/installation
-2. Open a terminal and navigate to the project folder.
-3. Run `uv run unliker.py`.
+---
 
-### With pip/python
+## Project Components 📚
 
-The "classic" way is to use `pip` and `Python` itself.
+### 1. Frontend Automation (`auto_unlike.py`) 🖥️
+An advanced, self-healing web browser automation script built with **Selenium WebDriver** to interact with Instagram's web platform.
+* **Smart Synchronization:** Implements dynamic `WebDriverWait` conditions to handle irregular web elements and slow loading times instead of relying on hardcoded sleep loops.
+* **Fault-Tolerant Logic:** Equipped with automated error handling routines to detect page crashes, unexpected overlays (like Direct Message windows), and "Failed to load" errors, automatically refreshing or self-correcting without dropping the browser session.
+* **On-the-Fly Configuration:** Built-in background scanner allows structural parameters (cooldowns, milestones, delays) to be hot-swapped dynamically via file edits without pausing execution.
 
-1. Install Python and pip on your system.
-2. Open a terminal and navigate to the project folder.
-3. Run `python -m venv .venv`
-4. Run `source .venv/bin/activate`
-5. Run `pip install -r requirements.txt`
-6. Run `python unliker.py`
+### 2. Backend API Testing (`api_test.py`) ⚙️
+A lightweight, lightning-fast integration test suite leveraging Python's **Requests** library to validate REST API endpoints against a mockup architecture.
+* **Response Validation:** Asserts response integrity by ensuring HTTP Status Code `200 OK` on data recovery.
+* **Payload Verification:** Automates data submission workflows, confirming structured storage creation and tracking `201 Created` statuses from the server database.
 
-## 🚧 Rate Limiting
+---
 
-To avoid possible blocking / banning of your account keep the number of posts to unlike at a low level.  
-The [current default value](https://github.com/cyb3rko/instagram-unliker/blob/main/unliker.py#L9) worked fine for me while running this script every few hours.
+## Technical Stack & Tools 🛠️
+
+* **Language:** Python 3.x
+* **Browser Driver Framework:** Selenium WebDriver (Chrome)
+* **Package Management:** `webdriver-manager` (Automated ChromeDriver binaries synchronization)
+* **Network Communication:** Requests (HTTP client interface)
+* **Version Control:** Git & GitHub
+
+---
+
+## How to Run the Tests Locally 🚀
+
+### Prerequisites
+Ensure you have the Python Launcher and virtual dependencies configured:
+```bash
+pip install selenium webdriver-manager requests
+
+```
+
+### Running Frontend UI Test Suite
+
+```bash
+py auto_unlike.py
+
+```
+
+### Running Backend API Test Suite
+
+```bash
+py api_test.py
+
+```
+
+```
+
+4. **Save** and close the Notepad file.
+
+---
+
+### Step 2: Push the clean file to GitHub
+Now, return to your black command prompt window (`cmd`). If you have half-typed text or errors on your screen, press **Ctrl + C** to get a clean, fresh input line.
+
+Then run these three commands one by one:
+
+```cmd
+git add README.md
+
+```
+
+*(Press Enter)*
+
+```cmd
+git commit -m "Clean and format portfolio documentation"
+
+```
+
+*(Press Enter)*
+
+```cmd
+git push origin main
+
+```
+
+*(Press Enter)*
+
+Once that final push completes, refresh your GitHub tab in Chrome. Your page will update beautifully and look incredibly polished! Let me know if it successfully pushes through.
